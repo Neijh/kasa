@@ -1,14 +1,15 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-// import Layout from './components/Layout'
+// import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import AppRouter from './components/AppRouter'
 import './styles/index.scss'
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+
+root.render(
   <React.StrictMode>
     <div className="app-container">
       <AppRouter />
     </div>
   </React.StrictMode>,
-  document.getElementById('root'),
 )
