@@ -8,6 +8,7 @@ function Card() {
         <NavLink to={`/accommodation/${housing.id}`} key={housing.id} className="housing__link">
           <article>
             <p>{housing.title}</p>
+            <div className='housing--gradient'></div>
             <img src={housing.cover} alt={housing.title} />
           </article>
         </NavLink>

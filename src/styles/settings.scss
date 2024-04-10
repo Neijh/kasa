@@ -1,7 +1,3 @@
-// @font-face {
-//     font-family: 'Montserrat', sans-serif;
-// }
-
 $primary-font-family: 'Montserrat', sans-serif;
 
 * {
@@ -11,5 +7,6 @@ $primary-font-family: 'Montserrat', sans-serif;
 }
 
 .app-container {
-    margin: 0 100px;
+    margin: 0 auto;
+    max-width: 1440px;
 }
