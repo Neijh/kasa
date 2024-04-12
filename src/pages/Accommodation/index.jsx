@@ -1,7 +1,9 @@
+import Slideshow from '../../components/Slideshow'
+
 function Accommodation() {
     return (
         <div>
-            <h1>Ceci sera pour les logements</h1>
+            <Slideshow />
         </div>
     )
 }
