@@ -14,7 +14,7 @@ function About() {
       </Banner>
 
       {aboutList.map((item, index) => (
-        <div key={index}>
+        <div key={index} className='collapse__text'>
           <Collapse title={item.title} content={item.content} />
         </div>
       ))}
