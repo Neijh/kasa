@@ -12,19 +12,20 @@ export default function Slideshow() {
 
   function showNextImage() {
     setImageIndex((index) => {
-      // if (index === currentHousing.pictures.length - 1) return 0
-      // return index + 1
-      setImageIndex(index === currentHousing.pictures.length -1 ? 0 : index + 1)
+      if (index === currentHousing.pictures.length - 1) return 0
+      return index + 1
+      // setImageIndex(index === currentHousing.pictures.length -1 ? 0 : index + 1)
     })
   }
 
   function showPrevImage() {
     setImageIndex((index) => {
-      // if (index === 0) return currentHousing.pictures.length - 1
-      // return index - 1
-      setImageIndex(index === 0 ? currentHousing.pictures.length -1 : index - 1)
+      if (index === 0) return currentHousing.pictures.length - 1
+      return index - 1
+      // setImageIndex(index === 0 ? currentHousing.pictures.length -1 : index - 1)
     })
   }
+  // console.log("Pictures length:", currentHousing.pictures.length);
 
   return (
     <section aria-label="slider">
