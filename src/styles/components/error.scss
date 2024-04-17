@@ -19,3 +19,32 @@ $main-color: #FF6060;
         font-weight: 500;
     }
 }
+
+@media (max-width: 1024px){
+    .error img {
+        width: 24rem;
+    }
+
+    .error h2 {
+        padding: 110px 0;
+    }
+}
+
+@media (max-width: 767.98px){
+    .error {
+        padding: 60px 0;
+    }
+
+    .error img {
+        width: 12rem;
+    }
+
+    .error h2 {
+        font-size: 18px;
+        padding: 80px 0;
+    }
+
+    .error p {
+        font-size: 14px;
+    }
+}

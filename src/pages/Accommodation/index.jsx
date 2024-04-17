@@ -10,38 +10,36 @@ function Accommodation() {
   const currentHousing = housings.find((housing) => housing.id === id)
 
   return (
-    // className='accommodation'
     <div>
       <section>
         <Slideshow />
       </section>
       <section>
-        <div className="info">
-          <div className="info__1">
-            <div className="info__title">
-              <h2>{currentHousing.title}</h2>
-              <p>{currentHousing.location}</p>
+        <div className="informations">
+          <div className="informations__details">
+            <div >
+              <h2 className="informations__details__title">{currentHousing.title}</h2>
+              <p className="informations__details__location">{currentHousing.location}</p>
             </div>
 
-            <div className="tags">
+            <div className="informations__tags">
               {currentHousing.tags.map((tag, index) => (
-                <p key={index} className="tag">
+                <p key={index} className="informations__tags__tag">
                   {tag}
                 </p>
               ))}
             </div>
           </div>
 
-          <div className="host__star">
-            <div className="host">
+          <div className="informations__host">
+            <div className="informations__host__container">
               <p>{currentHousing.host.name}</p>
               <img
                 src={currentHousing.host.picture}
                 alt="hôte du logement"
-                className="host__img"
               />
             </div>
-            <div>
+            <div className="host__star">
               <StarRate currentRate={currentHousing.rating} />
             </div>
           </div>

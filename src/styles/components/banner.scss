@@ -11,9 +11,10 @@ $img-border: 25px;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        font-size: 50px;
+        font-size: 48px;
         font-weight: 700;
         z-index: 1;
+        text-wrap: nowrap;
     }
 
     .banner--darken {
@@ -29,5 +30,29 @@ $img-border: 25px;
         height: 100%;
         object-fit: cover;
         border-radius: $img-border;
+    }
+}
+
+@media (max-width: 1024px){
+    .banner {
+        height: 11rem;
+
+        & p {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .banner {
+        height: 7rem;
+        
+        & p {
+            left: 30%;
+            transform: translate(-30%, -50%);
+
+            font-size: 24px;
+            text-wrap: wrap;
+        }
     }
 }
