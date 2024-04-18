@@ -45,11 +45,25 @@ $collapse-color: #ff6060;
     background-color: $collapse-background;
     padding: 0 1rem;
     transition: height .3s ease-in-out;
+
+    max-height: 1000px;
+    overflow: hidden;
   }
   
   .collapse__content p {
-    padding: 1rem 0;
+    padding: 0;
+    padding-top: 1rem;
     font-size: 20px;
+  }
+
+  .collapse__content p:last-child {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px){
+  .collapse .collapse__content p{
+    font-size: 19px;
   }
 }
 
@@ -59,6 +73,10 @@ $collapse-color: #ff6060;
   }
 
   .collapse__title p {
+    font-size: 18px;
+  }
+
+  .collapse .collapse__content p {
     font-size: 18px;
   }
 }

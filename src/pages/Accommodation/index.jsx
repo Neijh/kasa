@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import Slideshow from '../../components/Slideshow'
 import Collapse from '../../components/Collapse'
 import { housings } from '../../datas/housings'
@@ -8,6 +8,11 @@ import StarRate from '../../components/Star'
 function Accommodation() {
   const { id } = useParams()
   const currentHousing = housings.find((housing) => housing.id === id)
+
+  if (!currentHousing) {
+    // Redirect to error page if currentHousing is undefined
+    return <Navigate to="/error" replace={true} />;
+  }
 
   return (
     <div>
@@ -49,7 +54,10 @@ function Accommodation() {
             title={'Description'}
             content={currentHousing.description}
           />
-          <Collapse title={'Equipements'} content={currentHousing.equipments} />
+          <Collapse 
+          title={'Equipements'} 
+          content={currentHousing.equipments} 
+          />
         </div>
       </section>
     </div>
