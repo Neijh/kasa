@@ -71,6 +71,8 @@
   display: flex;
   gap: 20px;
 
+  overflow: hidden; /* Ensure children do not overflow */
+
   & > * {
     width: 50%;
   }
@@ -84,6 +86,13 @@
       flex-direction: row-reverse;
     }
   }
+
+  .housing__collapse {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+    }
 
 }
 
@@ -125,11 +134,6 @@
     width: 18px;
   }
 
-  .housing__collapse {
-    flex-direction: column;
-
-    & > * {
-      width: 100%;
-    }
+  
   }
 }
