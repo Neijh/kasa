@@ -1,14 +1,16 @@
-// import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/logo-red-desktop.svg'
-// import '../../styles/index.scss'
 
 function Header() {
   return (
     <header className="nav">
+      {/* Logo */}
       <img src={logo} alt="kasa" className="nav__logo" />
+
+      {/* Navigation Links */}
       <nav>
         <ul className="nav__link">
+          {/* Home Link */}
           <li>
             <NavLink
               to="/"
@@ -17,6 +19,7 @@ function Header() {
               Accueil
             </NavLink>
           </li>
+          {/* About Link */}
           <li>
             <NavLink
               to="/about"

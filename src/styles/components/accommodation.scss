@@ -1,21 +1,20 @@
-.informations {
+.details {
   display: flex;
   justify-content: space-between;
   padding: 25px 0;
-  // height: 200px;
 
-  &__details {
+  &__container1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    &__title {
+    & h2 {
       color: $main-color;
       font-weight: 500;
       padding-top: 15px;
     }
 
-    &__location {
+    & p {
       font-size: $desktop-p-size;
       padding-top: 5px;
     }
@@ -26,26 +25,26 @@
     padding-top: 24px;
     gap: 15px;
 
-    &__tag {
+    & p {
       font-weight: 700;
       font-size: 14px;
       background-color: $main-color;
       color: $secondary-color;
       border-radius: 10px;
-      padding: 10px 30px;
+      padding: 5px 35px;
       text-align: center;
     }
   }
 
-  &__host {
+  &__container2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    &__container {
+    &__host {
       display: flex;
       gap: 10px;
-    
+
       & p {
         font-size: $desktop-p-size;
         font-weight: 700;
@@ -71,7 +70,7 @@
   display: flex;
   gap: 20px;
 
-  overflow: hidden; /* Ensure children do not overflow */
+  overflow: hidden;
 
   & > * {
     width: 50%;
@@ -79,11 +78,15 @@
 }
 
 @media (max-width: 1024px) {
-  .informations {
+  .details {
     flex-direction: column;
 
-    &__host {
+    &__container2 {
       flex-direction: row-reverse;
+    }
+
+    &__tags {
+      padding: 15px 0;
     }
   }
 
@@ -93,47 +96,37 @@
     & > * {
       width: 100%;
     }
+  }
 
-}
+  @media (max-width: 767.98px) {
+    .details {
+      padding: 20px 0;
 
-
-@media (max-width: 767.98px) {
-  .informations {
-    padding: 20px 0;
-
-    &__details__title {
-      font-size: 18px;
-      padding-top: 0;
-    }
-
-    &__tags {
-      padding: 15px 0;
-
-      &__tag {
-        font-size: 10px;
-        padding: 10px 0;
-        width: 85px;
+      &__container1 h2 {
+        font-size: 18px;
+        padding-top: 0;
       }
-    }
 
-    // &__host {
-    //   flex-direction: row-reverse;
+      &__tags p {
+        font-size: 10px;
+        padding: 5px 25px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+      }
 
-      &__host__container p {
+      &__container2__host p {
         font-size: 12px;
       }
 
-      &__host__container img {
+      &__container2__host img {
         width: 32px;
         height: 32px;
       }
-    // }
-  }
+    }
 
-  .host__star img {
-    width: 18px;
-  }
-
-  
+    .details__container2__host__star img {
+      width: 18px;
+    }
   }
 }

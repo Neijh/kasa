@@ -1,21 +1,14 @@
 .collapse__text {
-    display: flex;
+  display: flex;
   flex-direction: column;
   margin: 0 100px;
   margin-bottom: 40px;
   overflow: hidden;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
   .collapse__text {
     margin: 0;
     margin-bottom: 20px;
   }
 }
-
-// @media (max-width: 767.98px) {
-//   .collapse__text {
-//     margin: 0;
-//     margin-bottom: 20px;
-//   }
-// }
