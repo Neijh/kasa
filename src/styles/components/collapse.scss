@@ -1,19 +1,8 @@
-$collapse-background: rgba(246, 246, 246, 0.45);
-$collapse-color: #ff6060;
-
 .collapse {
   border-radius: 5px;
-  // overflow: hidden;
-  // display: flex;
-  // flex-direction: column;
-  // margin-left: 100px;
-  // margin-right: 100px;
-  // margin-right: 100px;
-  // margin-bottom: 40px;
-
 
   &__title {
-    background-color: #ff6060;
+    background-color: $main-color;
     padding: 10px 20px 10px 15px;
     border-radius: 5px;
     display: flex;
@@ -23,60 +12,75 @@ $collapse-color: #ff6060;
     & p {
       font-size: 24px;
       font-weight: 700;
-      color: white;
+      color: #fff;
     }
-
-    .collapse__btn {
-      border: none;
-      background-color: #ff6060;
-      
-      & img {
-        transform: rotate(0deg);
-        transition: transform 0.2s ease-in-out;
-      }
-      
-      & img.rotate {
-        transform: rotate(-180deg);
-      }
+  }
+  &__btn {
+    border: none;
+    background-color: $main-color;
+    
+    & img {
+      transform: rotate(0deg);
+      transition: transform 0.2s ease-in-out;
+    }
+    
+    & img.rotate {
+      transform: rotate(-180deg);
     }
   }
 
-  .collapse__content {
+   &__content {
     background-color: $collapse-background;
     padding: 0 1rem;
     transition: height .3s ease-in-out;
 
     max-height: 1000px;
     overflow: hidden;
-  }
-  
-  .collapse__content p {
-    padding: 0;
-    padding-top: 1rem;
-    font-size: 20px;
-  }
 
-  .collapse__content p:last-child {
-    padding-bottom: 1rem;
+    & p {
+      padding: 0;
+      font-size: 18px;
+    }
+
+    & p:first-child {
+      padding-top: 1rem;
+    }
+    
+    & p:last-child {
+      padding-bottom: 1rem;
+    }
   }
 }
 
 @media (max-width: 1024px){
-  .collapse .collapse__content p{
-    font-size: 19px;
+  .collapse__title {
+    padding: 10px 20px 10px 10px;;
+
+    & p {
+      font-size: 18px;
+    }
   }
+
+  // .collapse .collapse__content p{
+  //   font-size: 19px;
+  // }
 }
 
 @media (max-width: 767.98px) {
   .collapse__title {
-    padding: 10px;
+    padding: 10px 6px 10px 10px;
+
+    & p {
+      font-size: 13px;
+    }
   }
 
-  .collapse__title p {
-    font-size: 18px;
+  .collapse__btn img {
+    width: 16px;
+    height: auto;
   }
 
   .collapse .collapse__content p {
-    font-size: 18px;
+    font-size: 12px;
   }
 }

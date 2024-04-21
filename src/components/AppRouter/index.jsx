@@ -12,8 +12,10 @@ function AppRouter() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* Renders the Accommodation component, passing id as a route parameter. */}
           <Route path="/accommodation/:id" element={<Accommodation />} />
           <Route path="/about" element={<About />} />
+          {/* It's a catch-all route that matches any other path. */}
           <Route path="*" element={<Error />} />
         </Routes>
       </Layout>

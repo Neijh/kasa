@@ -2,8 +2,8 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  background-color: #f6f6f6;
-  border-radius: 25px;
+  background-color: $cards-background;
+  border-radius: $img-border;
   padding-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
@@ -18,7 +18,7 @@
     margin-bottom: 5%;
   }
 
-  article {
+  & article {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,20 +26,20 @@
     height: 100%;
   }
 
-  img {
+  & img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
   }
 
-  p {
+  & p {
     position: absolute;
     bottom: 5%;
     left: 5%;
     font-size: 18px;
     font-weight: 700;
-    color: white;
+    color: $secondary-color;
     width: 50%;
     z-index: 1;
   }
